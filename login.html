@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN PAGE</title>
+	<style>
+		table{
+			border: 2px solid black;
+			width: 400px;
+			height: 300px;
+			margin-left: 450px;
+			margin-top: 100px;
+			text-align: center;
+		}
+	</style>
+	<script>
+		function func2()
+		{
+			x=document.getElementById("bh1").value;
+			y=document.getElementById("bh2").value;
+			pattern_1=/^[a-z]{1,20}\d{1,2}\@[a-z]{1,10}\.[a-z]{3}$/;
+			if(y.length==0 || x.length==0)
+			{
+				window.alert("Please Enter The Required Details!");
+			}
+			else if(x.match(pattern_1))
+			{
+				window.alert("You Successfully Logged in!");
+			}
+			else
+			{
+				window.alert("Please enter a valid Username!");
+			}
+		}
+	</script>
+</head>
+<body style="background-color: lightblue;">
+	<br><br>
+	<table>
+		<tr>
+			<td>
+				<h1> LOGIN </h1>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>Username : <input type="text" id="bh1"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>Password : <input type="text" id="bh2"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2><input type="button" id="bh3" value="SUBMIT" style="width:100px; background-color: skyblue;"onclick="func2()"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3><a href="file:///C:/Users/BHASURI/Desktop/FITNESS%20WEBSITE/signin.html">SIGN IN</a> If there is no account</h3>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

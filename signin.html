@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Signin page </title>
+	<style>
+		table{
+			border: 2px solid black;
+			width: 400px;
+			height: 300px;
+			margin-left: 450px;
+			margin-top: 100px;
+			text-align: center;
+		}
+	</style>
+	<script>
+		function Func()
+		{
+			a=0;
+			name=document.getElementById("bh1").value;
+			phone=document.getElementById("bh2").value;
+			email=document.getElementById("bh3").value;
+			pass=document.getElementById("bh4").value;
+			repass=document.getElementById("bh5").value;
+			name_pattern=/^[a-z]{1,20}$/;
+			phone_pattern=/^\d{10}$/;
+			email_pattern=/^[a-z]{1,20}\d{1,2}\@[a-z]{1,10}\.[a-z]{3}$/;
+			if(name.length==0 || phone.length==0 || email.length==0 || pass.length==0 || repass.length==0)
+			{
+				window.alert("Please Enter The Required Details!");
+			}
+			else
+			{
+				if(name.match(name_pattern))
+				{
+					a=a+1;
+				}
+				else
+				{
+					window.alert("Incorrect Name pattern. Please ReEnter!");
+				}
+				if(phone.match(phone_pattern))
+				{
+					a=a+1;
+				}
+				else
+				{
+					window.alert("Incorrect Phone pattern. Please ReEnter!");
+				}
+				if(email.match(email_pattern))
+				{
+					a=a+1;
+				}
+				else
+				{
+					window.alert("Incorrect Email pattern. Please ReEnter!");
+				}
+				if(repass==pass)
+				{
+					a=a+1;
+				}
+				else
+				{
+					window.alert("Please check the password!");
+				}
+				if(a==4)
+				{
+					window.alert("Succesfully SignedIn :)");
+				}
+			}
+		}
+	</script>
+</head>
+<body style="background-color: lightblue;">
+	<table>
+		<tr>
+			<td>
+				<h1> SIGNIN </h1>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>Name : <input type="text" id="bh1"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>Phone : <input type="text" id="bh2"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>email : <input type="text" id="bh3"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>Create Password : <input type="text" id="bh4"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2>ReEnter Password : <input type="text" id="bh5"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2><input type="button" id="bh6" value="SUBMIT" style="background-color: skyblue;" onclick="Func()"></h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2><a href="file:///C:/Users/BHASURI/Desktop/FITNESS%20WEBSITE/login.html">LOGIN</a></h2>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
